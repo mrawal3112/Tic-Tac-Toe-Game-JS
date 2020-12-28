@@ -1,0 +1,102 @@
+body
+{
+    margin:0;
+}
+*,*::after,*::before
+{
+    box-sizing: border-box;
+}
+.mega-container
+{
+    margin:30px 200px;
+    padding: auto;
+    width: 900px;
+    height: 600px;
+    border: 1px solid red;
+}
+.container
+{
+    width: 500px;
+    height: 500px;
+    display: grid;
+    margin-left: 200px;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3,auto); 
+}
+.players
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.players h1 {margin-left: 200px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+.players img{width: 30px;height: 30px;margin-top: 30px;}
+img{
+    margin-left: 15px;
+    margin-top: 15px;
+    width: 70px;
+    height: 70px;
+}
+.cell
+{
+    border: 1px solid black;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.cell:first-child,.cell:nth-child(2),.cell:nth-child(3){
+ border-top: none;   
+}
+.cell:nth-child(3n+1){
+    border-left: none;
+}
+.cell:nth-child(3n+3)
+{
+    border-right: none;
+}
+.cell:last-child,.cell:nth-child(8),.cell:nth-child(7)
+{
+    border-bottom: none;
+}
+.cell.close,.cell.circle
+{
+    cursor: not-allowed;
+}
+
+.result {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .9);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+  }
+  
+  .result button {
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+  }
+  
+  .result button:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+  }
+  
+  .result.show {
+    display: flex;
+  }
+
+
